@@ -47,6 +47,6 @@ export class Feedback extends BaseEntity {
   @JoinColumn({ name: 'assignee_id' })
   assignee: User | null;
 
-  @Column({ nullable: true, name: 'merged_into_id' })
+  @Column({ type: 'varchar', nullable: true, name: 'merged_into_id' })
   merged_into_id: string | null;
 }
